@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "739661758157",
+    "project_id": "adminapp-fdded",
+    "storage_bucket": "adminapp-fdded.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739661758157:android:1d7a0cb1f5eada383d3384",
+        "android_client_info": {
+          "package_name": "com.example.admin_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739661758157-drlk222su2ru9senmdrce79g4ri6c0es.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc7yLVWrquB2xy8yZAgurj1j02KogpAi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739661758157-drlk222su2ru9senmdrce79g4ri6c0es.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
