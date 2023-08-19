@@ -1,4 +1,4 @@
-import 'package:admin_app/HomePage.dart';
+import 'package:admin_app/homePage/HomePage.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
@@ -10,34 +10,42 @@ class LoginPage extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+          backgroundColor: Theme.of(context).colorScheme.background,
           body: Column(
             children: [
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                decoration: BoxDecoration(color: Colors.white),
-                child: Center(
-                  child: TextLiquidFill(
-                    text: 'Admin Cr.',
-                    waveDuration: Duration(seconds: 5),
-                    waveColor: Color(0xff47a04a),
-                    boxBackgroundColor: Colors.white,
-                    textStyle: TextStyle(
-                      fontSize: 30.0, // Adjust the font size as needed
-                      fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.only(top: 50),
+                child: Container(
+                  decoration: const BoxDecoration(color: Colors.white),
+                  child: Center(
+                    child: TextLiquidFill(
+                      text: 'Login',
+                      waveDuration: const Duration(seconds: 6),
+                      waveColor: const Color(0xff47a04a),
+                      boxBackgroundColor:
+                          Theme.of(context).colorScheme.background,
+                      textStyle: const TextStyle(
+                          fontSize: 50.0,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Lato'),
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 100, left: 10, right: 10),
+                padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: TextField(
                     decoration: InputDecoration(
                   hintText: 'Email',
-                  prefixIcon: const Icon(Icons.email_outlined),
-                  suffixIcon: const Icon(Icons.visibility_outlined),
-                  focusedBorder: OutlineInputBorder(
+                  prefixIcon: Icon(
+                    Icons.email_outlined,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.visibility_outlined,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  border: OutlineInputBorder(
                     borderSide: const BorderSide(
                       color: Color(0xffafb1b4),
                     ),
@@ -53,9 +61,15 @@ class LoginPage extends StatelessWidget {
                 child: TextField(
                     decoration: InputDecoration(
                   hintText: 'Password',
-                  prefixIcon: const Icon(Icons.lock_outline),
-                  suffixIcon: const Icon(Icons.visibility_off_outlined),
-                  focusedBorder: OutlineInputBorder(
+                  prefixIcon: Icon(
+                    Icons.lock_outline,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.visibility_off_outlined,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  border: OutlineInputBorder(
                     borderSide: const BorderSide(
                       color: Color(0xffafb1b4),
                     ),
@@ -66,18 +80,21 @@ class LoginPage extends StatelessWidget {
                   ),
                 )),
               ),
-              Container(
-                height: 50,
-                width: 300,
-                decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius:
-                        const BorderRadiusDirectional.all(Radius.circular(40))),
-                child: Center(
-                    child: Text(
-                  "Login",
-                  style: Theme.of(context).textTheme.displayLarge,
-                )),
+              Padding(
+                padding: const EdgeInsets.only(top: 170),
+                child: Container(
+                  height: 50,
+                  width: 300,
+                  decoration: const BoxDecoration(
+                      color: Color(0xff47a04a),
+                      borderRadius:
+                          BorderRadiusDirectional.all(Radius.circular(40))),
+                  child: Center(
+                      child: Text(
+                    "Login",
+                    style: Theme.of(context).textTheme.displayLarge,
+                  )),
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
