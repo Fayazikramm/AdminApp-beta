@@ -1,5 +1,8 @@
 import 'package:admin_app/homePage/AttandenceUi.dart';
-import 'package:admin_app/homePage/topwidget.dart';
+import 'package:admin_app/homePage/drawer/DrawerHeader.dart';
+import 'package:admin_app/homePage/drawer/Drawerlist.dart';
+
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,18 +11,64 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+        
+        
+        ),
+       body:
+      Container(
         color: Theme.of(context).colorScheme.background,
-        child: const Column(
+        child: Column(
           children: [
-            TopWidget(),
-            Padding(
-              padding: EdgeInsets.only(top: 30),
-              child: AttandenceUi(),
+            const Column(
+      
+              children: [
+               
+                Padding(
+                  padding: EdgeInsets.only(top: 30),
+                  child: Center(child: AttandenceUi()),
+                )
+              ],
             )
           ],
         ),
       ),
+     drawer: 
+       Drawer(
+      child: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              DrawerHead(),
+              DrawerList(),
+            ],
+          ),
+        ),
+      ),
+    
+
+
+ 
+     ),
+      ),
     );
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
