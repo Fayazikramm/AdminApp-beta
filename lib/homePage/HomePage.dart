@@ -1,4 +1,5 @@
 import 'package:admin_app/homePage/AttandenceUi.dart';
+import 'package:admin_app/homePage/component.dart';
 import 'package:admin_app/homePage/drawer/DrawerHeader.dart';
 import 'package:admin_app/homePage/drawer/Drawerlist.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -30,7 +31,12 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: EdgeInsets.only(top: 30),
                     child: Center(child: AttandenceUi()),
-                  )
+                  ),
+              SizedBox(
+height: 20,
+
+              ),
+              Component()
                 ],
               )
             ],

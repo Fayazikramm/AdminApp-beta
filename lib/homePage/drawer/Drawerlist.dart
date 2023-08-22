@@ -1,3 +1,5 @@
+
+import 'package:admin_app/model/ITEmployees.dart';
 import 'package:flutter/material.dart';
 
 class DrawerList extends StatelessWidget {
@@ -25,7 +27,10 @@ class MenuItems extends StatelessWidget {
       child: Column(
         children: [
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ItOp()));
+            },
             child: Row(
               children: [
                 Expanded(
