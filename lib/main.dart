@@ -1,5 +1,7 @@
 import 'package:admin_app/homePage/HomePage.dart';
+
 import 'package:admin_app/login/signup/loginScreen.dart';
+import 'package:admin_app/model/ITEmployees.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:page_transition/page_transition.dart';
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
                 surface: Color.fromARGB(255, 236, 236, 236),
                 onSurface: Color.fromARGB(255, 212, 208, 208)),
             textTheme: const TextTheme(
+               labelSmall: TextStyle(fontSize: 15,fontFamily: "Lato",color: Colors.black),
                 displaySmall: TextStyle(
                     color: Colors.black12, fontFamily: 'Lato', fontSize: 15),
                 displayMedium: TextStyle(
@@ -57,7 +60,9 @@ class MyApp extends StatelessWidget {
         home: const SplashScreen(),
         routes: {
           "/loginScreen": (context) => LoginPage(),
-          "/HomePage": (context) => const HomePage()
+          "/HomePage": (context) => const HomePage(),
+       "/ItList":(context) => ItOp(),
+       
         });
   }
 }
