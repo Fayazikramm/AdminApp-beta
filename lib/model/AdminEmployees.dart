@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ItEmployee {
+class AdminEmployee {
   final String name;
   final String designation;
   final String department;
   final int experience;
   final String imageUrl;
 
-  ItEmployee({
+  AdminEmployee({
     required this.name,
     required this.designation,
     required this.department,
@@ -16,95 +16,95 @@ class ItEmployee {
   });
 }
 
-List<ItEmployee> employees = [
-  ItEmployee(
-    name: 'Alisha Ahmed',
-    designation: 'Software Engineer',
-    department: 'IT Department',
+List<AdminEmployee> employees = [
+  AdminEmployee(
+    name: 'Touseef Shamsi',
+    designation: 'Office manager',
+    department: 'Admin Depart',
     experience: 5,
     imageUrl:
-        'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        'https://images.pexels.com/photos/4100672/pexels-photo-4100672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-  ItEmployee(
+  AdminEmployee(
     name: 'Aijaz Khan',
-    designation: 'Junior Software Engineer',
-    department: 'IT Department',
+    designation: 'Administrative Asst',
+    department: 'Admin Depart',
     experience: 8,
     imageUrl:
         'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-  ItEmployee(
+  AdminEmployee(
     name: 'Ali Hassan',
-    designation: 'UX Designer',
-    department: 'IT Department',
+    designation: 'Data Entry Clerk',
+    department: 'Admin Depart',
     experience: 3,
     imageUrl:
         'https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-  ItEmployee(
+  AdminEmployee(
     name: 'Najeet Singh',
-    designation: 'UI Designer',
-    department: 'IT Department',
+    designation: 'HR Asst',
+    department: 'Admin Depart',
     experience: 4,
     imageUrl:
         'https://images.pexels.com/photos/4307869/pexels-photo-4307869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-  ItEmployee(
+  AdminEmployee(
     name: 'Zainab Khan',
-    designation: 'Data Analyst',
-    department: 'IT Department',
+    designation: 'Receptionist',
+    department: 'Admin Depart',
     experience: 2,
     imageUrl:
         'https://images.pexels.com/photos/5615665/pexels-photo-5615665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-  ItEmployee(
+  AdminEmployee(
     name: 'Omar Siddiqui',
-    designation: 'Data Engineer',
-    department: 'IT Department',
+    designation: 'Purchasing Asst',
+    department: 'Admin Depart',
     experience: 6,
     imageUrl:
         'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg',
   ),
-  ItEmployee(
+  AdminEmployee(
     name: 'Fatima Ali',
-    designation: 'Jr Data Engineer',
-    department: 'IT Department',
+    designation: 'Legal Assit',
+    department: 'Admin Depart',
     experience: 7,
     imageUrl:
         'https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-  ItEmployee(
+  AdminEmployee(
     name: 'Ibrahim Qureshi',
-    designation: 'Front-end Developer',
-    department: 'IT Departmet',
+    designation: 'RMS',
+    department: 'Admin Depart',
     experience: 4,
     imageUrl:
         'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-  ItEmployee(
+AdminEmployee(
     name: 'Tahir Malik',
-    designation: 'Content Writer',
-    department: 'Content',
+    designation: 'Health and Safety',
+    department: 'Admin depart',
     experience: 3,
     imageUrl:
         'https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-  ItEmployee(
+  AdminEmployee(
     name: 'Amir Malik',
-    designation: 'CCTV Eng',
-    department: 'IT Department',
-    experience: 5,
+    designation: 'Tainee',
+    department: 'Admin Depart',
+    experience: 0,
     imageUrl:
         'https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
 ];
 
-class ItOp extends StatefulWidget {
+class AdminOp extends StatefulWidget {
   @override
-  State<ItOp> createState() => _ItOpState();
+  State<AdminOp> createState() => _AdminOpState();
 }
 
-class _ItOpState extends State<ItOp> {
+class _AdminOpState extends State<AdminOp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -112,26 +112,26 @@ class _ItOpState extends State<ItOp> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xff47a04a),
-          title: Text("IT Department"),
+          title: Text("Admin Department"),
         ),
-        body: ItEmployeeList(),
+        body: AdminEmployeeList(),
       ),
     );
   }
 }
 
-class ItEmployeeList extends StatefulWidget {
+class AdminEmployeeList extends StatefulWidget {
   @override
-  State<ItEmployeeList> createState() => _ItEmployeeListState();
+  State<AdminEmployeeList> createState() => _AdminEmployeeListState();
 }
 
-class _ItEmployeeListState extends State<ItEmployeeList> {
+class _AdminEmployeeListState extends State<AdminEmployeeList> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: employees.length,
       itemBuilder: (BuildContext context, int index) {
-        ItEmployee employee = employees[index];
+        AdminEmployee employee = employees[index];
         return Card(
           margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: ListTile(

@@ -1,7 +1,10 @@
 import 'package:admin_app/homePage/AttandenceUi.dart';
+import 'package:admin_app/homePage/MiddleImage.dart';
+import 'package:admin_app/homePage/MiddleText.dart';
 import 'package:admin_app/homePage/component.dart';
 import 'package:admin_app/homePage/drawer/DrawerHeader.dart';
 import 'package:admin_app/homePage/drawer/Drawerlist.dart';
+import 'package:admin_app/model/CProjects.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
@@ -20,6 +23,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          title: Text("Admin Cr."),
           backgroundColor: Colors.white,
         ),
         body: Container(
@@ -32,13 +36,19 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.only(top: 30),
                     child: Center(child: AttandenceUi()),
                   ),
-              SizedBox(
-height: 20,
-
-              ),
-              Component()
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Component()
                 ],
-              )
+              ),
+         SizedBox(
+          height: 10,
+         ),
+         Middle(),
+       Completed1(projectIndex: 0)
+      
+      
             ],
           ),
         ),
