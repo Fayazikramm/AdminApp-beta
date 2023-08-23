@@ -1,5 +1,6 @@
-
+import 'package:admin_app/model/AdminEmployees.dart';
 import 'package:admin_app/model/ITEmployees.dart';
+import 'package:admin_app/model/QSEmployee.dart';
 import 'package:flutter/material.dart';
 
 class DrawerList extends StatelessWidget {
@@ -28,8 +29,8 @@ class MenuItems extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ItOp()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => ItOp()));
             },
             child: Row(
               children: [
@@ -49,7 +50,10 @@ class MenuItems extends StatelessWidget {
           ),
           Divider(),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => AdminOp()));
+            },
             child: Row(
               children: [
                 Expanded(
@@ -68,7 +72,10 @@ class MenuItems extends StatelessWidget {
           ),
           Divider(),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => QsOp()));
+            },
             child: Row(
               children: [
                 Expanded(
