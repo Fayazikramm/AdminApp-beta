@@ -111,8 +111,8 @@ class _ItOpState extends State<ItOp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff47a04a),
-          title: Text("IT Department"),
+          backgroundColor: const Color(0xff47a04a),
+          title: const Text("IT Department"),
         ),
         body: ItEmployeeList(),
       ),
@@ -133,7 +133,7 @@ class _ItEmployeeListState extends State<ItEmployeeList> {
       itemBuilder: (BuildContext context, int index) {
         ItEmployee employee = employees[index];
         return Card(
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: ListTile(
             leading: CircleAvatar(
               backgroundImage: NetworkImage(employee.imageUrl),

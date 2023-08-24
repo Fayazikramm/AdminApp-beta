@@ -22,13 +22,13 @@ class AttandenceUi extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(20))),
       child: Column(
         children: [
-           SizedBox(
+           const SizedBox(
             height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             SizedBox(
+             const SizedBox(
               height: 20,
              ),
               Text(
@@ -37,12 +37,12 @@ class AttandenceUi extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
              
@@ -52,7 +52,7 @@ class AttandenceUi extends StatelessWidget {
             
                 style: Theme.of(context).textTheme.labelMedium,
               ),
-SizedBox(
+const SizedBox(
   width: 72.5,
 ),
 Container(
@@ -61,7 +61,7 @@ width: 2,
 color: Colors.black12,
 ),
       
-      SizedBox(
+      const SizedBox(
         width: 72.5,
       ),
          
@@ -71,7 +71,7 @@ color: Colors.black12,
                 style: Theme.of(context).textTheme.labelMedium,
               ),
          
-            SizedBox(
+            const SizedBox(
     width: 20,
   )
            

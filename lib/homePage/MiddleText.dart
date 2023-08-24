@@ -1,3 +1,4 @@
+import 'package:admin_app/model/CProjects.dart';
 import 'package:flutter/material.dart';
 
 class Middle extends StatelessWidget {
@@ -24,11 +25,17 @@ class Middle extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 90),
-              child: Container(
-                child: const Center(
-                  child: Text(
-                    "View More",
-                    style: TextStyle(color: Color(0xff47a04a)),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CompOp()));
+                },
+                child: Container(
+                  child: const Center(
+                    child: Text(
+                      "View More",
+                      style: TextStyle(color: Color(0xff47a04a)),
+                    ),
                   ),
                 ),
               ),

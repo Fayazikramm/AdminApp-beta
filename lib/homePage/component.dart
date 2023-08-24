@@ -1,4 +1,5 @@
-import 'package:admin_app/model/CProjects.dart';
+import 'package:admin_app/Complain/ComplianView/ComplainView.dart';
+import 'package:admin_app/PieChart.dart';
 import 'package:admin_app/model/Projects.dart';
 import 'package:flutter/material.dart';
 
@@ -18,16 +19,16 @@ class _ComponentState extends State<Component> {
           Container(
               height: 60,
               width: 60,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Color(0xe147a04a),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.camera_outdoor_outlined,
                     color: Colors.white,
                   ))),
-          SizedBox(
+          const SizedBox(
             height: 05,
           ),
           Container(
@@ -42,7 +43,7 @@ class _ComponentState extends State<Component> {
           )
         ],
       ),
-      SizedBox(
+      const SizedBox(
         width: 10,
       ),
       Column(
@@ -50,19 +51,19 @@ class _ComponentState extends State<Component> {
           Container(
               height: 60,
               width: 60,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Color(0xe147a04a),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: IconButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => CompOp()));
+                        MaterialPageRoute(builder: (context) => PichartView()));
                   },
-                  icon: Icon(
-                    Icons.done_all_outlined,
+                  icon: const Icon(
+                    Icons.pie_chart_outline,
                     color: Colors.white,
                   ))),
-          SizedBox(
+          const SizedBox(
             height: 05,
           ),
           Container(
@@ -70,14 +71,14 @@ class _ComponentState extends State<Component> {
             width: 80,
             child: Center(
                 child: Text(
-              "Complete Projects",
+              "Projects Record",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.labelSmall,
             )),
           )
         ],
       ),
-      SizedBox(
+      const SizedBox(
         width: 10,
       ),
       Column(
@@ -85,7 +86,7 @@ class _ComponentState extends State<Component> {
           Container(
               height: 60,
               width: 60,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Color(0xe147a04a),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: IconButton(
@@ -93,11 +94,11 @@ class _ComponentState extends State<Component> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => PrOp()));
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.construction_outlined,
                     color: Colors.white,
                   ))),
-          SizedBox(
+          const SizedBox(
             height: 05,
           ),
           Container(
@@ -106,13 +107,13 @@ class _ComponentState extends State<Component> {
             child: Center(
                 child: Text(
               " Projects",
-            textAlign: TextAlign.center,
+              textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.labelSmall,
             )),
           )
         ],
       ),
-      SizedBox(
+      const SizedBox(
         width: 10,
       ),
       Column(
@@ -120,16 +121,21 @@ class _ComponentState extends State<Component> {
           Container(
               height: 60,
               width: 60,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Color(0xe147a04a),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ComplainManagementApp()));
+                  },
+                  icon: const Icon(
                     Icons.error_outline,
                     color: Colors.white,
                   ))),
-          SizedBox(
+          const SizedBox(
             height: 05,
           ),
           Container(
@@ -138,7 +144,7 @@ class _ComponentState extends State<Component> {
             child: Center(
                 child: Text(
               "Complains",
-            textAlign: TextAlign.center,
+              textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.labelSmall,
             )),
           )

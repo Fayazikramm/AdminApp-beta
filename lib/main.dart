@@ -1,5 +1,8 @@
+import 'package:admin_app/Complain/ComplianView/ComplainView.dart';
+import 'package:admin_app/Complain/Registration/ComplainRegistration.dart';
+import 'package:admin_app/PieChart.dart';
 import 'package:admin_app/homePage/HomePage.dart';
-import 'package:admin_app/homePage/MiddleImage.dart';
+
 import 'package:admin_app/model/CProjects.dart';
 import 'package:admin_app/login/signup/loginScreen.dart';
 import 'package:admin_app/model/ITEmployees.dart';
@@ -9,6 +12,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,8 +28,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            iconTheme: IconThemeData(color: Color(0xff47a04a), size: 22),
-            primaryColor: Color(0xff47a04a),
+            iconTheme: const IconThemeData(color: Color(0xff47a04a), size: 22),
+            appBarTheme: AppBarTheme(color: Theme.of(context).primaryColor),
+            primaryColor: const Color(0xff47a04a),
             colorScheme: const ColorScheme(
                 brightness: Brightness.light,
                 primary: Color(0xff47a04a),
@@ -61,15 +66,15 @@ class MyApp extends StatelessWidget {
                 displayLarge: TextStyle(
                     color: Colors.black, fontFamily: 'Lato', fontSize: 30))),
         home: const SplashScreen(),
-      
         routes: {
-          "/loginScreen": (context) => LoginPage(),
+          "/loginScreen": (context) => const LoginPage(),
           "/HomePage": (context) => const HomePage(),
           "/ItList": (context) => ItOp(),
-        "/Projects":(context) => PrOp(),
-      "/complete projects":(context) =>CompOp (),
-'/MiddleImage':(context) =>     Completed1(projectIndex: 0)
-
+          "/Projects": (context) => const PrOp(),
+          "/complete projects": (context) => CompOp(),
+          "/PiChart": (context) => const PichartView(),
+          "/ComplainRegistratiion": (context) => ComplainRegistrationApp(),
+          '/ComplainView': (context) => ComplainManagementApp()
         });
   }
 }
@@ -93,7 +98,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ],
       ),
       backgroundColor: Colors.white,
-      nextScreen: LoginPage(),
+      nextScreen: const LoginPage(),
       splashIconSize: 250,
       duration: 5000,
       splashTransition: SplashTransition.rotationTransition,
@@ -112,9 +117,9 @@ Widget _typer() {
       ),
       child: AnimatedTextKit(isRepeatingAnimation: true, animatedTexts: [
         TyperAnimatedText('Admin Cr',
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
                 fontFamily: 'Lato', color: Color(0xff47a04a), fontSize: 35),
-            speed: Duration(milliseconds: 100)),
+            speed: const Duration(milliseconds: 100)),
       ]),
     ),
   );
