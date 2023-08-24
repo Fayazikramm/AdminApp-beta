@@ -100,6 +100,8 @@ List<QsEmployee> employees = [
 ];
 
 class QsOp extends StatefulWidget {
+  const QsOp({super.key});
+
   @override
   State<QsOp> createState() => _AdminOpState();
 }
@@ -111,16 +113,18 @@ class _AdminOpState extends State<QsOp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff47a04a),
-          title: Text("QS Department"),
+          backgroundColor: const Color(0xff47a04a),
+          title: const Text("QS Department"),
         ),
-        body: AdminEmployeeList(),
+        body: const AdminEmployeeList(),
       ),
     );
   }
 }
 
 class AdminEmployeeList extends StatefulWidget {
+  const AdminEmployeeList({super.key});
+
   @override
   State<AdminEmployeeList> createState() => _AdminEmployeeListState();
 }
@@ -133,7 +137,7 @@ class _AdminEmployeeListState extends State<AdminEmployeeList> {
       itemBuilder: (BuildContext context, int index) {
         QsEmployee employee = employees[index];
         return Card(
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: ListTile(
             leading: CircleAvatar(
               backgroundImage: NetworkImage(employee.imageUrl),

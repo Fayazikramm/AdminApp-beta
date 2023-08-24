@@ -108,7 +108,7 @@ class _SignupPageState extends State<SignupPage> {
                               return null;
                             },
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           TextFormField(
@@ -144,7 +144,7 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                         ],
                       ))),
-              SizedBox(
+              const SizedBox(
                 height: 100,
               ),
               Roundbutton(

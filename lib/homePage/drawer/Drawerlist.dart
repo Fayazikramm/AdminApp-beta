@@ -9,8 +9,8 @@ class DrawerList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 15),
-      child: Column(
+      padding: const EdgeInsets.only(top: 15),
+      child: const Column(
         children: [MenuItems()],
       ),
     );
@@ -24,7 +24,7 @@ class MenuItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
         child: Padding(
-      padding: EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(15.0),
       child: Column(
         children: [
           InkWell(
@@ -34,7 +34,7 @@ class MenuItems extends StatelessWidget {
             },
             child: Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: Icon(
                     Icons.computer_outlined,
                   ),
@@ -48,7 +48,7 @@ class MenuItems extends StatelessWidget {
               ],
             ),
           ),
-          Divider(),
+          const Divider(),
           InkWell(
             onTap: () {
               Navigator.push(
@@ -56,7 +56,7 @@ class MenuItems extends StatelessWidget {
             },
             child: Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: Icon(
                     Icons.manage_accounts,
                   ),
@@ -70,7 +70,7 @@ class MenuItems extends StatelessWidget {
               ],
             ),
           ),
-          Divider(),
+          const Divider(),
           InkWell(
             onTap: () {
               Navigator.push(
@@ -78,7 +78,7 @@ class MenuItems extends StatelessWidget {
             },
             child: Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: Icon(
                     Icons.queue_play_next_outlined,
                   ),
@@ -92,7 +92,7 @@ class MenuItems extends StatelessWidget {
               ],
             ),
           ),
-          Divider(),
+          const Divider(),
         ],
       ),
     ));

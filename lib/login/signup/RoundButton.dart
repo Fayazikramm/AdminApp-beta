@@ -17,19 +17,19 @@ class Roundbutton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: 50,
-        width: 300,
+        width: 280,
         decoration: const BoxDecoration(
             color: Color(0xff47a04a),
             borderRadius: BorderRadiusDirectional.all(Radius.circular(40))),
         child: Center(
           child: loading
-              ? CircularProgressIndicator(
+              ? const CircularProgressIndicator(
                   strokeWidth: 2,
                   color: Colors.white,
                 )
               : Text(
                   tittle,
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.white,
                       fontFamily: 'Lato',
                       fontSize: 30,

@@ -1,3 +1,4 @@
+import 'package:admin_app/Complain/Registration/ComplainRegistration.dart';
 import 'package:admin_app/firebase/util.dart';
 import 'package:admin_app/login/signup/signUp.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -56,13 +57,13 @@ class _LoginPageState extends State<LoginPage> {
           body: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.only(top: 30),
                 child: Container(
                   decoration: const BoxDecoration(color: Colors.white),
                   child: Center(
                     child: TextLiquidFill(
                       text: 'Login',
-                      waveDuration: const Duration(seconds: 6),
+                      waveDuration: const Duration(seconds: 4),
                       waveColor: const Color(0xff47a04a),
                       boxBackgroundColor:
                           Theme.of(context).colorScheme.background,
@@ -75,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Padding(
-                  padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
+                  padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
                   child: Form(
                       key: formKey,
                       child: Column(
@@ -147,17 +148,17 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ],
                       ))),
-              SizedBox(
-                height: 100,
-              ),
-              Roundbutton(
-                tittle: 'Login',
-                loading: loading,
-                onTap: () {
-                  if (formKey.currentState!.validate()) {
-                    login();
-                  }
-                },
+              Padding(
+                padding: const EdgeInsets.only(top: 130),
+                child: Roundbutton(
+                  tittle: 'Login',
+                  loading: loading,
+                  onTap: () {
+                    if (formKey.currentState!.validate()) {
+                      login();
+                    }
+                  },
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -185,6 +186,30 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
+              Center(
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text(
+                    "Did you have any complain?",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    ComplainRegistrationApp()));
+                      },
+                      child: Text(
+                        "Yes!!",
+                        style: TextStyle(
+                          color: Color(0xff47a04a),
+                          fontSize: 20,
+                        ),
+                      ))
+                ]),
+              )
             ],
           ),
         ));

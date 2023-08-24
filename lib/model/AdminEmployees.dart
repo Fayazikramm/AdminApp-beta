@@ -81,7 +81,7 @@ List<AdminEmployee> employees = [
     imageUrl:
         'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-AdminEmployee(
+  AdminEmployee(
     name: 'Tahir Malik',
     designation: 'Health and Safety',
     department: 'Admin depart',
@@ -133,7 +133,7 @@ class _AdminEmployeeListState extends State<AdminEmployeeList> {
       itemBuilder: (BuildContext context, int index) {
         AdminEmployee employee = employees[index];
         return Card(
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: ListTile(
             leading: CircleAvatar(
               backgroundImage: NetworkImage(employee.imageUrl),

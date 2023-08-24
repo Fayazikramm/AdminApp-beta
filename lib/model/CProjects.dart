@@ -21,7 +21,7 @@ class CompletedProject {
 }
 
 List<CompletedProject> constructionProjects = [
-   CompletedProject(
+  CompletedProject(
     projectName: 'Side Line Bridge',
     clientCompany: 'EEP Ltd',
     projectManager: 'Jane Smith',
@@ -121,7 +121,6 @@ List<CompletedProject> constructionProjects = [
     imageUrl:
         'https://images.pexels.com/photos/1463917/pexels-photo-1463917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ),
-   
 ];
 
 class CompletedProjectDetailPage extends StatelessWidget {
@@ -133,26 +132,26 @@ class CompletedProjectDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Project Details'),
+        title: const Text('Project Details'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.network(project.imageUrl),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text('Project Name: ${project.projectName}',
-                style: TextStyle(fontSize: 20)),
-            SizedBox(height: 8),
+                style: const TextStyle(fontSize: 20)),
+            const SizedBox(height: 8),
             Text('Client Company: ${project.clientCompany}'),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text('Project Manager: ${project.projectManager}'),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text('Start Date: ${project.startDate}'),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text('End Date: ${project.endDate}'),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text('Budget: ₹${project.projectBudget.toStringAsFixed(2)}'),
           ],
         ),
@@ -160,6 +159,7 @@ class CompletedProjectDetailPage extends StatelessWidget {
     );
   }
 }
+
 class completedProjectList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -168,7 +168,7 @@ class completedProjectList extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         CompletedProject project = constructionProjects[index];
         return Card(
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: ListTile(
             onTap: () {
               Navigator.push(
@@ -206,6 +206,7 @@ class completedProjectList extends StatelessWidget {
     );
   }
 }
+
 class CompOp extends StatefulWidget {
   @override
   State<CompOp> createState() => _CompOpState();
@@ -218,13 +219,13 @@ class _CompOpState extends State<CompOp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff47a04a),
-          title: Text("Completed Projects"),
+          backgroundColor: const Color(0xff47a04a),
+          title: const Text("Completed Projects"),
         ),
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Text(
                 " Projects",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),

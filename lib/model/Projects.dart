@@ -112,6 +112,8 @@ List<ConstructionProject> constructionProjects = [
 ];
 
 class PrOp extends StatefulWidget {
+  const PrOp({super.key});
+
   @override
   State<PrOp> createState() => _PrOpState();
 }
@@ -123,13 +125,13 @@ class _PrOpState extends State<PrOp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff47a04a),
-          title: Text("Construction Projects"),
+          backgroundColor: const Color(0xff47a04a),
+          title: const Text("Construction Projects"),
         ),
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Text(
                 "Construction Projects",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -144,6 +146,8 @@ class _PrOpState extends State<PrOp> {
 }
 
 class ConstructionProjectList extends StatelessWidget {
+  const ConstructionProjectList({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -151,7 +155,7 @@ class ConstructionProjectList extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         ConstructionProject project = constructionProjects[index];
         return Card(
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: ListTile(
             onTap: () {
               Navigator.push(
@@ -177,7 +181,7 @@ class ConstructionProjectList extends StatelessWidget {
               children: [
                 Text('Start Date: ${project.startDate}'),
                 Text("Budget:  ${project.projectBudget.toStringAsFixed(2)}"),
-                SizedBox(
+                const SizedBox(
                   height: 2,
                 ),
                 InkWell(
@@ -188,7 +192,7 @@ class ConstructionProjectList extends StatelessWidget {
                               builder: (context) =>
                                   ProjectDetailsPage(project: project)));
                     },
-                    child: Text(
+                    child: const Text(
                       "Details",
                       style: TextStyle(
                           color: Color(0xff47a04a),
@@ -207,13 +211,14 @@ class ConstructionProjectList extends StatelessWidget {
 class ProjectDetailsPage extends StatelessWidget {
   final ConstructionProject project;
 
-  ProjectDetailsPage({required this.project});
+  ProjectDetailsPage({super.key, required this.project});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Project Details'),
+        title: const Text('Project Details'),
+        backgroundColor: const Color.fromARGB(255, 71, 160, 74),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -221,16 +226,16 @@ class ProjectDetailsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.network(project.imageUrl),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text('Project Name: ${project.projectName}',
-                style: TextStyle(fontSize: 20)),
-            SizedBox(height: 8),
+                style: const TextStyle(fontSize: 20)),
+            const SizedBox(height: 8),
             Text('Client Company: ${project.clientCompany}'),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text('Project Manager: ${project.projectManager}'),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text('Start Date: ${project.startDate}'),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text('Budget: ₹${project.projectBudget.toStringAsFixed(2)}'),
           ],
         ),
