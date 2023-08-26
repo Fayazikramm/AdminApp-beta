@@ -1,4 +1,4 @@
-// Firebase setup and initialization
+
 
 import 'package:admin_app/firebase/util.dart';
 import 'package:admin_app/login/signup/RoundButton.dart';
@@ -22,7 +22,6 @@ class ComplainRegistrationApp extends StatelessWidget {
   }
 }
 
-// Design the complain registration form
 class ComplainForm extends StatefulWidget {
   @override
   _ComplainFormState createState() => _ComplainFormState();
@@ -38,7 +37,7 @@ class _ComplainFormState extends State<ComplainForm> {
 
   @override
   void dispose() {
-    // Clear the text field values when the widget is disposed
+    
     super.dispose();
     departmentName = '';
     employeeName = '';
@@ -116,7 +115,7 @@ class _ComplainFormState extends State<ComplainForm> {
 
                   'employee': employeeName,
                   'description': description,
-                  'status': 'pending', // Initial status
+                  'status': 'pending', 
                 }).then((value) {
                   setState(() {
                     Loading = false;
