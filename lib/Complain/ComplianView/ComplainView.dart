@@ -106,9 +106,9 @@ class ComplaintDetailsPage extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    // Perform delete operation
+                    //
                     complaintsRef.child(complaint.id).remove();
-                    Navigator.pop(context); // Go back to the complaints list
+                    Navigator.pop(context); 
                   },
                   child: Text('Delete'),
                 ),
